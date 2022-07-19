@@ -1,7 +1,6 @@
 package nextstep.subway.applicaion.dto;
 
 import lombok.*;
-import nextstep.subway.domain.StationLine;
 
 @Getter
 @NoArgsConstructor
@@ -20,15 +19,4 @@ public class StationLineRequest {
         this.downStationId = downStationId;
         this.distance = distance;
     }
-
-    public StationLine toEntity() {
-        return StationLine.builder()
-            .name(name)
-            .color(color)
-            .upStationId(upStationId)
-            .downStationId(downStationId)
-            .distance(distance)
-            .build();
-    }
-
 }
